@@ -107,7 +107,6 @@ def run_streamlit_app():
         Use Export Version = version 2  
     5. Download the report from the Job monitor and upload below
     ''')
-    st.write("Upload the CSV export of the EN query Monthly Donor Reports/New Monthly Donor Report edited to include participation date of target month. Please be sure to use Monthly Donor Reports export group.")
     
     # File upload
     uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
