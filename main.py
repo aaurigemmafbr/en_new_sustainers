@@ -93,8 +93,8 @@ def save_filtered_csv(filtered_df, target_month, output_dir="."):
 
 def run_streamlit_app():
     """Streamlit web interface"""
-    st.title("CSV Month Filter Tool")
-    st.write("Upload a CSV file and select a month to filter by Campaign Data 16 column")
+    st.title("EN New Sustainers by Month")
+    st.write("Upload the CSV export of the EN query Monthly Donor Reports/New Monthly Donor Report edited to include participation date of target month. Please be sure to use Monthly Donor Reports export group.")
     
     # File upload
     uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
@@ -136,7 +136,7 @@ def run_streamlit_app():
 
 def run_cli():
     """Command line interface for local testing"""
-    print("CSV Month Filter Tool - CLI Mode")
+    print("CLI Mode")
     print("=" * 40)
     
     # Get CSV file path
