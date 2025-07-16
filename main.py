@@ -94,6 +94,19 @@ def save_filtered_csv(filtered_df, target_month, output_dir="."):
 def run_streamlit_app():
     """Streamlit web interface"""
     st.title("EN New Sustainers by Month")
+    st.write('''
+    1. In Engaging Networks, navigate to Data & Reports --> Export --> Monthly Donor Reports --> New Monthly Donor Report  
+    2. Edit the query Participation Date to include the target month  
+    3. Click Use Query  
+    4. Use the following Export Options:  
+        Format = Transaction  
+        File Type = csv  
+        Custom Reference Names = checked  
+        Supporter Data Columns = checked  
+        Use Export Group = Monthly Donor Reports  
+        Use Export Version = version 2  
+    5. Download the report from the Job monitor and upload below
+    ''')
     st.write("Upload the CSV export of the EN query Monthly Donor Reports/New Monthly Donor Report edited to include participation date of target month. Please be sure to use Monthly Donor Reports export group.")
     
     # File upload
