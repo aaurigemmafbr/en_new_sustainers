@@ -189,9 +189,10 @@ def run_cli():
         print(f"Error: {str(e)}")
 
 if __name__ == "__main__":
-    if "streamlit" in sys.argv[0]:
-        # Running via 'streamlit run main.py'
+    try:
+        # Try accessing Streamlit's session_state; if it works, we're in Streamlit
+        _ = st.session_state
         run_streamlit_app()
-    else:
-        # Running via 'python main.py'
+    except RuntimeError:
+        # If accessing session_state fails, run CLI
         run_cli()
